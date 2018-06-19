@@ -14,7 +14,27 @@
 bool isPalindrome (char sentence[], int length) {
     printf("\nisPalindrome::START: %s, %d\n", sentence, length);
 
-    // TODO: YOUR CODE HERE!
+    int inicio=0;
+   int lenght=0;
+   int fim = length - 1;
+
+
+
+    while(inicio<=(lenght/2)){
+
+        if (sentence[inicio]!= sentence[fim]) {
+            printf("A palavara %s não é palindromo\n",sentence);
+
+            return false;
+        }
+
+        else {
+            printf("A palavra %s é palindromo\n",sentence);
+            return true;
+        }
+        inicio++;
+
+}
     
     printf("\nisPalindrome::END\n");
     return false;
