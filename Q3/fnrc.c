@@ -10,10 +10,30 @@
  */
 char firstNonRepeatingChar (char sentence[], int length)
 {
-    printf("\nfirstNonRepeatingChar::START: %s, %d\n", s, length);
+    printf("\nfirstNonRepeatingChar::START: %s, %d\n", sentence, length);
     
-    // TODO: YOUR CODE HERE!
-    
+   int repetida;
+    int inicio=0;
+    int teste=0;
+
+    for (inicio=0 ; inicio < length; inicio++) {
+        repetida=0;
+        for (teste=0 ; teste < length; teste++) {
+            if(inicio!=teste){
+                if (sentence[inicio]== sentence[teste]) {
+                    repetida++;
+                }
+              }
+            else{
+                repetida= repetida+0;
+            }
+       }
+        if (repetida==0) {
+            printf("A primeira letra não repetida é '%c'\n",sentence[inicio]);
+
+            break;
+                }
+        }
     printf("\nfirstNonRepeatingChar::END\n");
     return -1;
 }
